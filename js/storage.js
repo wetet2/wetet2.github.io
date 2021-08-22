@@ -1,14 +1,14 @@
 const Storage = {
-    set: function(key, value){
+    set: function (key, value) {
         window.localStorage.setItem(key, value);
     },
-    get: function(key){
+    get: function (key) {
         return window.localStorage.getItem(key);
     },
-    remove: function(key){
+    remove: function (key) {
         window.localStorage.removeItem(key);
     },
-    clear: function(){
+    clear: function () {
         window.localStorage.clear();
     }
 
