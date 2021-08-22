@@ -1,0 +1,222 @@
+* { margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { overflow: hidden; }
+
+.area-wrap { width: 100vw; height: 100vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.area { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-height: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; width: 100%; background-color: #fff; -webkit-transition: all 1.5s; transition: all 1.5s; overflow: hidden; }
+.area { transition: all 1.5s, transform 2s;}
+
+.area .logo{
+   width: 100px;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+.area.area1,
+.area.area2,
+.area.area3,
+.area.area4,
+.area.area5
+{ transform: translatex(-100%);}
+
+.area.full { min-height: 100vh; }
+
+.area.full.area1 { background-color: #fff; color: #333;}
+
+.area.hidden { opacity: 0; }
+
+.area h3 { font-family: 'DM Sans', 'Consolas', sans-serif; font-size: 2em; -webkit-transition: all .3s; transition: all .3s; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
+
+.area.empty { background: none; height: 10vh; flex:3; }
+
+.area.area1 { border-top: 1px solid #eee; background-color: #eee; color: #3d5969; background-image: url(/3d/images/back.png); background-size: 16px; }
+
+.area.area1 h3:hover { color: #3d5969; text-shadow: none; }
+
+.area.area1 h3.clicked { color: #3d5969; text-shadow: none; }
+
+.area.area2 { background-color: #222223; color: #fff; }
+
+.area.area2 h3:hover { color: #ffee8f; text-shadow: none; }
+
+.area.area2 h3.clicked { color: #ffee8f; text-shadow: none; }
+
+.area.area3 { background-color: #F8C7B8; color: #5d2f31; }
+
+.area.area3 h3:hover { color: #5d2f31; text-shadow: none; }
+
+.area.area3 h3.clicked { color: #5d2f31; text-shadow: none; }
+
+
+
+.area.area4 { background: linear-gradient(to right, #689fd7, #8cd2da 25%, #56bd97 50%, #4ab77c); color: #fff};
+
+.area.area4 h3:hover { color: #fff; text-shadow: none; }
+
+.area.area4 h3.clicked { color: #fff; text-shadow: none; }
+.area.area4.animate {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   min-height: auto;
+   max-height: none;
+   transition: bottom .5s;
+   flex: 0 !important;
+}
+
+.area.area4.go-top{
+   bottom: calc(100vh - 40px);
+}
+
+.area.area5 { 
+   background: url(/wedding/images/flower.jpg) no-repeat center center;
+   background-size: cover;
+}
+.area.area5:before{
+   content:'';
+   position: absolute;
+   top: 0;left:0;right:0;bottom:0%;
+   background: #fff;
+   opacity: .5;
+   transition: all .5s;
+   z-index: 1;
+}
+.area.area5 h3 {
+   color: #6f4b4c;
+   transition: all .5s;
+   z-index: 2;
+}
+.area.area5 .icon{
+   z-index: 2;
+}
+.area.area5.full h3{
+   text-shadow: 0 0px 4px rgb(255 255 255);
+}
+.area.area5.full:before{
+   opacity: 0;
+}
+.area.area5 h3:hover { color: #5d2f31; text-shadow: none; }
+
+.area.area5 h3.clicked { color: #5d2f31; text-shadow: none; }
+
+.dot-click { display: block; position: absolute; top: 0; left: 0; width: 100px; height: 100px; border-radius: 100%; 
+   background-color: #f44336; 
+   -webkit-transform: translate3d(-50%, -50%, 0); 
+   transform: translate3d(-50%, -50%, 0); 
+   -webkit-transition: width 0.75s ease-out,
+ height 0.75s ease-out,
+ opacity 0.75s ease-out; transition: width 0.75s ease-out,
+ height 0.75s ease-out,
+ opacity 0.75s ease-out; z-index: 1; pointer-events: none; mix-blend-mode: difference; }
+
+.dot-cursor { position: fixed; top: 0; left: 0; width: 2em; height: 2em; -webkit-transition: top .2s ease-out, left .2s ease-out, width .4s ease-out, height .4s ease-out, opacity .4s; transition: top .1s ease-out, left .1s ease-out, width .4s ease-out, height .4s ease-out, opacity .4s; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); border-radius: 100%; background-color: #f44336; opacity: 0; z-index: 1; pointer-events: none; mix-blend-mode: difference; }
+
+.dot-cursor.big { width: 5em; height: 5em; max-height: 20vh; max-width: 20vh; }
+.dot-cursor.hidden{
+   opacity: 0 !important;
+}
+.copyright{
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    font-size: 16px;
+    color: #966868;
+    font-family: 'DM Sans', 'Consolas', sans-serif;
+    z-index: 1;
+    cursor: pointer;
+    
+    /* background: #fff; */
+ }
+.copyright:hover{
+   text-decoration: underline;
+}
+
+ .admin{
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    font-family: 'DM Sans', 'Consolas', sans-serif;
+    z-index: 1;
+    color: #333;
+    font-size: 16px;
+
+ }
+
+ .area .icon{
+   display: flex;
+   justify-content: flex-end;
+   position: absolute;
+   left: 0;
+   bottom: 8px;
+   width: 100%;
+   height: 28px;
+   padding-right: 8px;
+   transition: opacity 1s;   
+
+ }
+ .area .icon >span{
+   width: 28px;
+   height: 28px;
+}
+.area .icon >span.pc{
+   background: url(../../sample1/images/pc.svg) no-repeat 50% ;
+   background-size: 28px auto;
+}
+.area .icon >span.pc2{
+   background: url(../../sample1/images/pc2.svg) no-repeat 50%;
+   background-size: 28px auto;
+}
+.area .icon >span.mobile{
+   background: url(../../sample1/images/mobile.svg) no-repeat 50%;
+   background-size: 28px auto;
+}
+.area .icon >span.mobile2{
+   background: url(../../sample1/images/mobile2.svg) no-repeat 50%;
+   background-size: 28px auto;
+}
+.area .icon >span + span{
+   margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) { 
+   .area h3 { font-size: 1.5em; } 
+   .area.area1{ max-height: 100px;}
+   .area.area2{ max-height: 100px;}
+   .area.area3{ max-height: 100px;}
+   .area.area4{ max-height: 100px;}
+   .area.area5{ max-height: 100px;}
+
+   .area .icon{
+      height:16px;
+   }
+   .area .icon >span{
+      width: 16px;
+      height: 16px;
+   }
+   .area .icon >span.pc{
+      background-size: 16px auto;
+   }
+   .area .icon >span.pc2{
+      background-size: 16px auto;
+   }
+   .area .icon >span.mobile{
+      background-size: 16px auto;
+   }
+   .area .icon >span.mobile2{
+      background-size: 16px auto;
+   }
+
+   .area.area4.go-top{
+      bottom: calc(100vh - 50px);
+   }
+}
+
+
+
