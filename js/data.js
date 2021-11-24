@@ -1,3 +1,4 @@
+console.log(`Welcome to Hoyoon's place !!`)
 const Regex = {
     Transform: /transform:(.+?);/g,
     RotateX: /(rotateX\()(-?)\d+(\.?)\d*(?=deg)?/gi,
