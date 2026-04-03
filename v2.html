@@ -90,10 +90,14 @@
 
         // 음성 인식 시작 시
         recognition.onstart = () => {
-          statusText.textContent = "듣는 중입니다... 말씀해 주세요.";
-          statusText.style.color = "red";
+          statusText.textContent = "준비중....";
           startBtn.disabled = true;
           stopBtn.disabled = false;
+        };
+
+        recognition.onaudiostart = () => {
+          statusText.textContent = "듣는 중입니다... 말씀해 주세요.";
+          statusText.style.color = "red";
         };
 
         // 음성 인식 결과가 반환될 때
