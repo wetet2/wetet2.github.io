@@ -53,7 +53,7 @@
     </style>
   </head>
   <body>
-    <h1>음성 인식 (Speech to Text) v4</h1>
+    <h1>음성 인식 (Speech to Text) v5</h1>
 
     <div class="btn-group">
       <button id="start-btn">🎤 말하기 시작</button>
@@ -110,7 +110,24 @@
           console.log(9999);
         };
 
+        let lastProcessedTranscript = "";
+
         recognition.onresult = (event) => {
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              const transcript = event.results[i][0].transcript.trim();
+
+              // 방어 로직: 방금 막 처리한 문장과 완전히 똑같은 문장이 들어오면 무시
+              if (transcript !== lastProcessedTranscript) {
+                totalFinalTranscript += transcript + " ";
+                lastProcessedTranscript = transcript;
+              }
+            }
+          }
+          resultDiv.innerText = lastProcessedTranscript;
+        };
+
+        recognition.onresult2 = (event) => {
           let interimTranscript = ""; // 현재 말하고 있는 중간 결과
           let currentFinalTranscript = ""; // 이번 이벤트에서 확정된 최종 결과
 
