@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음성 인식 테스트</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .btn-group {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        button:hover {
+            background-color: #e2e6ea;
+        }
+        button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+        #status {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        #result {
+            border: 2px dashed #007bff;
+            border-radius: 5px;
+            padding: 15px;
+            min-height: 150px;
+            font-size: 18px;
+            line-height: 1.5;
+            background-color: #f4f8ff;
+        }
+        .interim {
+            color: #999; /* 말하고 있는 도중의 임시 텍스트는 회색으로 표시 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>음성 인식 (Speech to Text)</h1>
+    
+    <div class="btn-group">
+        <button id="start-btn">🎤 말하기 시작</button>
+        <button id="stop-btn" disabled>⏹️ 중지</button>
+    </div>
+    
+    <div id="status">버튼을 누르고 마이크 접근을 허용해 주세요.</div>
+    <div id="result"></div>
+
+    <script>
+        const startBtn = document.getElementById('start-btn');
+        const stopBtn = document.getElementById('stop-btn');
+        const resultDiv = document.getElementById('result');
+        const statusText = document.getElementById('status');
+
+        // 브라우저 호환성 체크 (Chrome은 webkitSpeechRecognition 사용)
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (!window.SpeechRecognition) {
+            statusText.textContent = "현재 브라우저는 음성 인식을 지원하지 않습니다. (Chrome 브라우저를 사용해주세요)";
+            startBtn.disabled = true;
+        } else {
+            const recognition = new SpeechRecognition();
+            
+            // 옵션 설정
+            recognition.interimResults = true; // 말하는 도중에도 결과를 지속적으로 반환
+            recognition.lang = 'ko-KR'; // 한국어 설정 (영어의 경우 'en-US')
+            recognition.continuous = true; // 끊기지 않고 계속 인식하도록 설정
+
+            let finalTranscript = ''; // 확정된 전체 텍스트를 저장할 변수
+
+            // 음성 인식 시작 시
+            recognition.onstart = () => {
+                statusText.textContent = "듣는 중입니다... 말씀해 주세요.";
+                statusText.style.color = "red";
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+            };
+
+            // 음성 인식 결과가 반환될 때
+            recognition.onresult = (event) => {
+                let interimTranscript = ''; // 임시 텍스트
+
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    // 인식이 완료된 단어
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript + ' ';
+                    } 
+                    // 인식 중인 단어
+                    else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+
+                // 확정된 텍스트와 임시 텍스트를 화면에 출력
+                resultDiv.innerHTML = finalTranscript + '<span class="interim">' + interimTranscript + '</span>';
+            };
+
+            // 오류 발생 시
+            recognition.onerror = (event) => {
+                console.error("Speech recognition error", event.error);
+                statusText.textContent = `오류가 발생했습니다: ${event.error}`;
+                statusText.style.color = "red";
+            };
+
+            // 음성 인식 종료 시
+            recognition.onend = () => {
+                statusText.textContent = "음성 인식이 중지되었습니다.";
+                statusText.style.color = "#666";
+                startBtn.disabled = false;
+                stopBtn.disabled = true;
+            };
+
+            // 버튼 클릭 이벤트
+            startBtn.addEventListener('click', () => {
+                recognition.start();
+            });
+
+            stopBtn.addEventListener('click', () => {
+                recognition.stop();
+            });
+        }
+    </script>
+</body>
+</html>
