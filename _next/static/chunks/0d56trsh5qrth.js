@@ -124,7 +124,8 @@ ${t}`)}return a})(tK);class tY extends t${create(e,t){var n;let{api_version:r=th
 
   code {
     font-family:
-      "Fira Code", "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+      "Fira Code", "Consolas", "Menlo", "Monaco", "Courier New", "Pretendard",
+      monospace;
     font-size: 13px;
   }
 
