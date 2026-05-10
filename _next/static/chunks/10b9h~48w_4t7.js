@@ -177,6 +177,7 @@ ${t}`)}return a})(rj);class rH extends rF{create(e,t){var n;let{api_version:r=th
     border-radius: 6px;
     background: #c7e1ff;
     color: #1f2937;
+    word-break: break-word;
   }
 
   .hljs-keyword,
