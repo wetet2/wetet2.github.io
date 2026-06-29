@@ -24,16 +24,16 @@
   96% { opacity: 0.6; }
   97% { opacity: 1; }
 `,c=o.default.div.withConfig({displayName:"styled__Container",componentId:"sc-e319c320-0"})`
-  min-height: 100vh;
-  background: #0a0a0f;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-  font-family: "Pretendard", sans-serif;
+  min-height: 100vh;
   padding: 80px 20px;
+  font-family: "Pretendard", sans-serif;
+  background: #0a0a0f;
+  overflow: hidden;
 `,f=o.default.div.withConfig({displayName:"styled__Grid",componentId:"sc-e319c320-1"})`
   position: absolute;
   inset: 0;
@@ -55,21 +55,21 @@
   animation: ${i} 10s linear infinite;
 `,d=o.default.div.withConfig({displayName:"styled__GlowBar",componentId:"sc-e319c320-3"})`
   position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, ${({$color:e})=>e}25 0%, transparent 70%);
   top: ${({$top:e})=>e};
   left: ${({$left:e})=>e};
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, ${({$color:e})=>e}25 0%, transparent 70%);
+  border-radius: 50%;
   filter: blur(80px);
   pointer-events: none;
 `,y=o.default.div.withConfig({displayName:"styled__Content",componentId:"sc-e319c320-4"})`
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 560px;
 `,m=o.default.div.withConfig({displayName:"styled__Badge",componentId:"sc-e319c320-5"})`
@@ -83,10 +83,10 @@
   font-weight: 700;
 
   &::after {
-    content: "";
     width: 4px;
     height: 4px;
     background: #00ffff;
+    content: "";
     border-radius: 50%;
     animation: ${a} 1s step-end infinite;
   }
@@ -146,11 +146,11 @@
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
-  border: 1px solid rgba(255, 0, 255, 0.15);
-  border-radius: 8px;
+  text-decoration: none;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(8px);
-  text-decoration: none;
+  border: 1px solid rgba(255, 0, 255, 0.15);
+  border-radius: 8px;
   transition: all 0.25s ease;
   cursor: pointer;
 
@@ -164,20 +164,20 @@
   }
 
   &:hover .arrow {
-    transform: translateX(4px);
     color: #00ffff;
+    transform: translateX(4px);
   }
 `,_=o.default.div.withConfig({displayName:"styled__CardIcon",componentId:"sc-e319c320-9"})`
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;
-  background: rgba(255, 0, 255, 0.08);
-  border: 1px solid rgba(255, 0, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
   flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  background: rgba(255, 0, 255, 0.08);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 0, 255, 0.2);
 `,b=o.default.div.withConfig({displayName:"styled__CardText",componentId:"sc-e319c320-10"})`
   display: flex;
   flex-direction: column;
@@ -192,11 +192,11 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.35);
 `,E=o.default.span.withConfig({displayName:"styled__Arrow",componentId:"sc-e319c320-13"})`
+  flex-shrink: 0;
+  margin-left: auto;
   font-size: 16px;
   color: rgba(255, 0, 255, 0.3);
   transition: all 0.25s ease;
-  margin-left: auto;
-  flex-shrink: 0;
 `,j=o.default.div.withConfig({displayName:"styled__Footer",componentId:"sc-e319c320-14"})`
   font-size: 10px;
   color: rgba(0, 255, 255, 0.3);

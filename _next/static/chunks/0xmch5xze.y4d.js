@@ -5,19 +5,19 @@
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100vh); }
 `,s=r.default.header.withConfig({displayName:"styled__Toolbar",componentId:"sc-7094a356-0"})`
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   height: 52px;
-  display: flex;
-  align-items: center;
   padding: 0 24px;
   background: rgba(10, 10, 15, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(0, 255, 255, 0.1);
-  z-index: 100;
 `,u=r.default.div.withConfig({displayName:"styled__ToolbarBrand",componentId:"sc-7094a356-1"})`
   font-size: 14px;
   font-weight: 700;
@@ -30,14 +30,14 @@
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
   }
 `,l=r.default.div.withConfig({displayName:"styled__Container",componentId:"sc-7094a356-2"})`
-  min-height: 100vh;
-  background: #0a0a0f;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
+  min-height: 100vh;
   padding: 92px 20px 40px;
+  background: #0a0a0f;
+  overflow: hidden;
 `,c=r.default.div.withConfig({displayName:"styled__Grid",componentId:"sc-7094a356-3"})`
   position: absolute;
   inset: 0;
@@ -59,27 +59,27 @@
   animation: ${a} 10s linear infinite;
 `,d=r.default.div.withConfig({displayName:"styled__Orb",componentId:"sc-7094a356-5"})`
   position: absolute;
+  top: ${({$top:e})=>e};
+  left: ${({$left:e})=>e};
   width: ${({$size:e})=>e};
   height: ${({$size:e})=>e};
-  border-radius: 50%;
   background: radial-gradient(
     circle,
     rgba(0, 255, 255, 0.06) 0%,
     transparent 70%
   );
-  top: ${({$top:e})=>e};
-  left: ${({$left:e})=>e};
+  border-radius: 50%;
   filter: blur(60px);
   animation: ${i} 5s ease-in-out infinite;
   animation-delay: ${({$delay:e})=>e}s;
   pointer-events: none;
 `,p=r.default.div.withConfig({displayName:"styled__Content",componentId:"sc-7094a356-6"})`
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 600px;
 `,y=r.default.div.withConfig({displayName:"styled__Badge",componentId:"sc-7094a356-7"})`
@@ -104,10 +104,10 @@
     background-clip: text;
   }
 `,h=r.default.p.withConfig({displayName:"styled__Subtitle",componentId:"sc-7094a356-9"})`
+  margin: -24px 0 0;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
-  margin: -24px 0 0;
   letter-spacing: 0.5px;
 `,m=r.default.div.withConfig({displayName:"styled__CardGrid",componentId:"sc-7094a356-10"})`
   display: flex;
@@ -124,34 +124,34 @@
   align-items: center;
   gap: 16px;
   padding: 18px 22px;
-  border: 1px solid rgba(0, 255, 255, 0.12);
-  border-radius: 10px;
+  text-decoration: none;
   background: rgba(0, 255, 255, 0.02);
   backdrop-filter: blur(12px);
-  text-decoration: none;
+  border: 1px solid rgba(0, 255, 255, 0.12);
+  border-radius: 10px;
   transition: all 0.25s ease;
   cursor: pointer;
 
   &:hover {
-    border-color: rgba(0, 255, 255, 0.4);
     background: rgba(0, 255, 255, 0.05);
+    border-color: rgba(0, 255, 255, 0.4);
     box-shadow: 0 0 24px rgba(0, 255, 255, 0.1);
     transform: translateY(-1px);
   }
 `,b=r.default.div.withConfig({displayName:"styled__CardIcon",componentId:"sc-7094a356-12"})`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   width: 42px;
   height: 42px;
-  border-radius: 8px;
+  font-size: 20px;
   background: linear-gradient(
     135deg,
     rgba(0, 255, 255, 0.12),
     rgba(255, 0, 255, 0.08)
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
+  border-radius: 8px;
 `,v=r.default.div.withConfig({displayName:"styled__CardText",componentId:"sc-7094a356-13"})`
   display: flex;
   flex-direction: column;
@@ -166,22 +166,22 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.35);
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
 `,k=r.default.span.withConfig({displayName:"styled__Arrow",componentId:"sc-7094a356-16"})`
+  flex-shrink: 0;
   font-size: 18px;
   color: rgba(0, 255, 255, 0.4);
   transition: transform 0.25s ease;
-  flex-shrink: 0;
 
   ${_}:hover & {
-    transform: translateX(4px);
     color: #00ffff;
+    transform: translateX(4px);
   }
 `,E=r.default.div.withConfig({displayName:"styled__Footer",componentId:"sc-7094a356-17"})`
+  margin-top: 8px;
   font-size: 10px;
   color: rgba(255, 255, 255, 0.1);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 8px;
 `,S=[{href:"/t",short:"Typing",icon:"⌨️",title:"손은 눈보다 빠르다",desc:"타이핑으로 실력을 연습하자"},{href:"/c",short:"Furniture",icon:"🪑",title:"Drop The Furniture",desc:"3D 공간에 가구 배치하기"},{href:"/d",short:"Drawing",icon:"✏️",title:"Drawing Board",desc:"자유롭게 그리고 색칠하기"},{href:"/g",short:"Chat",icon:"💬",title:"AI Chat",desc:"AI와 자유로운 대화"},{href:"/n",short:"News",icon:"📰",title:"AI 뉴스",desc:"최신 AI 뉴스 다이제스트"}];e.s(["default",0,function(){return(0,t.jsxs)(l,{children:[(0,t.jsxs)(n.default,{children:[(0,t.jsx)("title",{children:"Everything AI Have"}),(0,t.jsx)("meta",{name:"description",content:"Everything AI Have — 여러 AI 도구를 한곳에 모은 프로젝트입니다."})]}),(0,t.jsx)(s,{children:(0,t.jsxs)(u,{children:["everything",(0,t.jsx)("span",{children:"ai"}),"have"]})}),(0,t.jsx)(c,{}),(0,t.jsx)(f,{}),(0,t.jsx)(d,{$top:"10%",$left:"5%",$size:"400px",$delay:0}),(0,t.jsx)(d,{$top:"60%",$left:"70%",$size:"350px",$delay:2.5}),(0,t.jsxs)(p,{children:[(0,t.jsx)(y,{children:"master & guest"}),(0,t.jsxs)(g,{children:["나의 ",(0,t.jsx)("span",{children:"AI"}),"저씨"]}),(0,t.jsx)(h,{children:"AI 주인님께 드리는 미천한 나의 프롬프트"}),(0,t.jsx)(m,{children:S.map(e=>(0,t.jsxs)(_,{href:e.href,children:[(0,t.jsx)(b,{children:e.icon}),(0,t.jsxs)(v,{children:[(0,t.jsx)(x,{children:e.title}),(0,t.jsx)(w,{children:e.desc})]}),(0,t.jsx)(k,{className:"arrow",children:"→"})]},e.href))}),(0,t.jsx)(E,{children:"©https://github.com/wetet2"})]})]})}],87856)},55075,(e,t,n)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/",()=>e.r(87856)]),t.hot&&t.hot.dispose(function(){window.__NEXT_P.push(["/"])})},48761,e=>{e.v(t=>Promise.all(["static/chunks/0ey~yy8oeyp~5.js"].map(t=>e.l(t))).then(()=>t(93594)))},28805,e=>{e.v(t=>Promise.all(["static/chunks/0599p99vu8fk5.js"].map(t=>e.l(t))).then(()=>t(79466)))}]);
