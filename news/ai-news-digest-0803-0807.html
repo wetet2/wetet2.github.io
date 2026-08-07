@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#071013" />
+    <meta name="theme-color" content="#061b2b" />
     <meta
       name="description"
       content="2026년 8월 3일부터 8월 7일까지의 AI 뉴스 브리핑"
@@ -16,19 +16,21 @@
     />
     <style>
       :root {
-        --ink: #e7f1ec;
-        --ink-dim: #9aada5;
-        --ink-faint: #60736c;
-        --night: #071013;
-        --panel: #0c171a;
-        --panel-raised: #101f22;
-        --line: rgba(150, 221, 204, 0.14);
-        --line-strong: rgba(150, 221, 204, 0.28);
-        --cyan: #70f0d1;
-        --cyan-soft: rgba(112, 240, 209, 0.12);
-        --amber: #ffbd6b;
-        --amber-soft: rgba(255, 189, 107, 0.12);
-        --violet: #a7a9ff;
+        --ink: #e8fbff;
+        --ink-dim: #a6d4dd;
+        --ink-faint: #6a9aa8;
+        --night: #061b2b;
+        --panel: #0a2b3a;
+        --panel-raised: #0e3e50;
+        --line: rgba(151, 230, 238, 0.17);
+        --line-strong: rgba(151, 230, 238, 0.34);
+        --cyan: #6df7e1;
+        --cyan-soft: rgba(109, 247, 225, 0.13);
+        --amber: #ffd27e;
+        --amber-soft: rgba(255, 210, 126, 0.14);
+        --violet: #91c7ff;
+        --sea-blue: #5ecbff;
+        --coral: #ff9f8c;
         --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
         --sans:
           "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
@@ -51,7 +53,7 @@
         font-size: 15px;
         line-height: 1.65;
 
-        background: var(--night);
+        background: linear-gradient(180deg, #09283e 0%, var(--night) 58%, #041522 100%);
         color: var(--ink);
       }
 
@@ -61,17 +63,22 @@
         z-index: -2;
 
         background-image:
-          linear-gradient(rgba(112, 240, 209, 0.028) 1px, transparent 1px),
-          linear-gradient(
-            90deg,
-            rgba(112, 240, 209, 0.028) 1px,
-            transparent 1px
+          radial-gradient(
+            ellipse at 18% 18%,
+            rgba(94, 203, 255, 0.16),
+            transparent 28%
+          ),
+          repeating-radial-gradient(
+            ellipse at 10% 100%,
+            transparent 0 34px,
+            rgba(109, 247, 225, 0.035) 35px 36px,
+            transparent 37px 78px
           );
-        background-size: 48px 48px;
+        background-size: 100% 100%, 100% 220px;
 
         pointer-events: none;
         content: "";
-        opacity: 0.48;
+        opacity: 0.62;
       }
 
       body::after {
@@ -82,14 +89,15 @@
         background:
           radial-gradient(
             circle at 72% 0%,
-            rgba(112, 240, 209, 0.08),
+            rgba(94, 203, 255, 0.18),
             transparent 32%
           ),
           radial-gradient(
             circle at 16% 78%,
-            rgba(167, 169, 255, 0.06),
+            rgba(109, 247, 225, 0.1),
             transparent 26%
-          );
+          ),
+          linear-gradient(180deg, rgba(14, 77, 106, 0.18), transparent 48%);
 
         pointer-events: none;
         content: "";
@@ -158,9 +166,10 @@
 
         font-size: 12px;
 
-        background: rgba(7, 16, 19, 0.84);
+        background: rgba(6, 27, 43, 0.84);
         border-bottom: 1px solid var(--line);
         backdrop-filter: blur(18px);
+        box-shadow: 0 6px 24px rgba(0, 20, 32, 0.18);
       }
 
       .brand {
@@ -184,7 +193,7 @@
 
         background: var(--cyan);
         color: var(--night);
-        box-shadow: 0 0 24px rgba(112, 240, 209, 0.25);
+        box-shadow: 0 0 24px rgba(109, 247, 225, 0.3);
       }
 
       .brand-copy {
@@ -242,7 +251,7 @@
 
         background: var(--cyan-soft);
         color: var(--cyan);
-        border: 1px solid rgba(112, 240, 209, 0.24);
+        border: 1px solid rgba(109, 247, 225, 0.3);
       }
 
       .status-dot {
@@ -251,7 +260,7 @@
 
         background: var(--cyan);
         border-radius: 50%;
-        box-shadow: 0 0 10px var(--cyan);
+        box-shadow: 0 0 12px var(--cyan);
       }
 
       .button {
@@ -289,8 +298,8 @@
 
       .button-primary:hover,
       .button-primary:focus-visible {
-        background: #a1ffe9;
-        border-color: #a1ffe9;
+        background: #b8fff2;
+        border-color: #b8fff2;
       }
 
       .button-ghost {
@@ -315,6 +324,9 @@
 
         padding: 54px 0 34px;
 
+        background:
+          linear-gradient(135deg, rgba(94, 203, 255, 0.11), transparent 58%),
+          radial-gradient(circle at 88% 20%, rgba(109, 247, 225, 0.08), transparent 24%);
         border-bottom: 1px solid var(--line-strong);
       }
 
@@ -328,7 +340,7 @@
         height: 2px;
 
         background: var(--cyan);
-        box-shadow: 0 0 14px rgba(112, 240, 209, 0.42);
+        box-shadow: 0 0 16px rgba(109, 247, 225, 0.5);
         content: "";
       }
 
@@ -642,7 +654,7 @@
 
         min-width: 0;
 
-        background: rgba(12, 23, 26, 0.86);
+        background: rgba(10, 43, 58, 0.88);
         border: 1px solid var(--line);
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
         transition:
@@ -657,12 +669,12 @@
         border-color: var(--line-strong);
         box-shadow:
           0 16px 32px rgba(0, 0, 0, 0.22),
-          0 0 0 1px rgba(112, 240, 209, 0.12);
+          0 0 0 1px rgba(109, 247, 225, 0.16);
         transform: translate3d(0, -6px, 0);
       }
 
       .story-card.is-important {
-        border-color: rgba(112, 240, 209, 0.29);
+        border-color: rgba(109, 247, 225, 0.4);
       }
 
       .story-card.is-important:hover {
@@ -680,7 +692,7 @@
 
         height: 184px;
 
-        background: #15282a;
+        background: #0d3544;
         overflow: hidden;
       }
 
@@ -691,7 +703,7 @@
         background: linear-gradient(
           180deg,
           transparent 48%,
-          rgba(7, 16, 19, 0.44) 100%
+          rgba(3, 22, 34, 0.46) 100%
         );
         opacity: 0.72;
         content: "";
@@ -706,7 +718,7 @@
         object-fit: cover;
         transform: scale(1);
 
-        filter: saturate(0.72) contrast(1.04);
+        filter: saturate(0.9) contrast(1.04) brightness(0.96);
         transition:
           filter 320ms var(--ease-smooth),
           transform 700ms var(--ease-smooth);
@@ -720,7 +732,7 @@
 
       .story-image:hover img,
       .story-card:hover .story-image img {
-        filter: saturate(1) contrast(1.06);
+        filter: saturate(1.08) contrast(1.06) brightness(1);
         transform: scale(1.055);
       }
 
@@ -914,7 +926,7 @@
 
         padding: 7px 10px;
 
-        background: rgba(12, 23, 26, 0.76);
+        background: rgba(7, 31, 47, 0.78);
         border: 1px solid var(--line);
       }
 
@@ -1125,7 +1137,7 @@
           <span class="brand-mark">N</span>
           <span class="brand-copy">
             <span class="brand-name">NEXUS / AI SIGNAL</span>
-            <span class="brand-sub">FUTURE SOCIETY BRIEFING</span>
+            <span class="brand-sub">COASTAL CURRENT / SUMMER 2026</span>
           </span>
         </a>
         <nav class="topnav" aria-label="페이지 탐색">
@@ -1258,7 +1270,7 @@
           <p class="digest-verdict">
             <strong>BRIEFING READ</strong><span>이번 주의 공통 신호는 단순한 모델 출시가 아니다. <strong>AI가 현실에 더 깊이 들어갈수록 성능·운영 구조·비용·신뢰·책임을 한 번에 설계해야 한다</strong>는 사실이 반복해서 드러났다.</span>
           </p>
-        </section>        </section>
+        </section>
 
         <section class="section" id="signals" aria-labelledby="signals-title">
           <div class="section-heading">
@@ -1292,7 +1304,7 @@
                 <button class="filter-button" type="button" data-filter="08.07">08.07</button>
                 <button class="filter-button" type="button" data-filter="안전">안전</button>
                 <button class="filter-button" type="button" data-filter="모델">모델</button>
-              </div>              </div>
+              </div>
               <label class="search-box" for="searchInput"
                 ><span>/</span
                 ><input
