@@ -14,6 +14,9 @@ self.__BUILD_MANIFEST = {
   "/d": [
     "static/chunks/054fsdx_3jp81.js"
   ],
+  "/e": [
+    "static/chunks/06z.gdi0uo1p0.js"
+  ],
   "/g": [
     "static/chunks/0ltbiv.xhtvyz.js"
   ],
@@ -35,6 +38,7 @@ self.__BUILD_MANIFEST = {
     "/b",
     "/c",
     "/d",
+    "/e",
     "/g",
     "/n",
     "/t"
