@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI & Tech Weekly Digest | 2026.08.30 ~ 2026.09.04</title>
+  <title>AI & Tech Weekly Digest | 2026.08.30 — 2026.09.04</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
        7. 빈 줄
        8. font 관련
        9. background 관련
-       10. border, shadow, transition, etc.
+       10. border, shadow, transition, cursor, etc.
     */
     :root {
       --bg-primary: #0a0e17;
@@ -26,7 +26,7 @@
       --bg-card: rgba(17, 24, 39, 0.85);
       --bg-card-hover: rgba(30, 41, 59, 0.95);
       --border-color: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(99, 102, 241, 0.4);
+      --border-accent: rgba(99, 102, 241, 0.45);
       --accent-primary: #6366f1;
       --accent-secondary: #a855f7;
       --accent-cyan: #06b6d4;
@@ -395,6 +395,7 @@
       flex-direction: column;
       overflow: hidden;
       cursor: pointer;
+      text-decoration: none;
 
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -431,38 +432,6 @@
 
     .story-card:hover .story-thumb {
       transform: scale(1.05);
-    }
-
-    .verified-badge {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-
-      position: absolute;
-      top: 10px;
-      right: 10px;
-
-      padding: 4px 8px;
-
-      font-size: 11px;
-      font-weight: 700;
-      color: #4ade80;
-
-      background: rgba(0, 0, 0, 0.75);
-      border: 1px solid rgba(74, 222, 128, 0.4);
-      border-radius: 6px;
-      backdrop-filter: blur(4px);
-    }
-
-    .verified-badge::before {
-      content: '';
-      display: inline-block;
-
-      width: 6px;
-      height: 6px;
-
-      background: #4ade80;
-      border-radius: 50%;
     }
 
     .story-body {
@@ -509,6 +478,11 @@
       font-weight: 700;
       color: #fff;
       line-height: 1.45;
+      transition: color 0.2s ease;
+    }
+
+    .story-card:hover .story-title {
+      color: #a5b4fc;
     }
 
     .story-summary {
@@ -566,114 +540,13 @@
 
       font-size: 12px;
       font-weight: 600;
-      color: #fff;
-      text-decoration: none;
+      color: #c7d2fe;
 
       transition: color 0.2s ease;
     }
 
-    .open-btn:hover {
-      color: #a5b4fc;
-    }
-
-    /* 상세 모달 창 */
-    .modal-overlay {
-      display: none;
-      align-items: center;
-      justify-content: center;
-
-      position: fixed;
-      inset: 0;
-      z-index: 999;
-
-      padding: 20px;
-
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(8px);
-    }
-
-    .modal-overlay.open {
-      display: flex;
-    }
-
-    .modal-content {
-      display: flex;
-      flex-direction: column;
-
-      position: relative;
-
-      width: 100%;
-      max-width: 680px;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 28px;
-
-      background: #111827;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.8);
-    }
-
-    .modal-close {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      position: absolute;
-      top: 18px;
-      right: 18px;
-
-      width: 32px;
-      height: 32px;
-
-      font-size: 20px;
-      color: var(--text-muted);
-      cursor: pointer;
-
-      background: rgba(255, 255, 255, 0.08);
-      border: none;
-      border-radius: 50%;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .modal-close:hover {
+    .story-card:hover .open-btn {
       color: #fff;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .modal-img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border-radius: 12px;
-    }
-
-    .modal-title {
-      margin-bottom: 12px;
-
-      font-size: 22px;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.4;
-    }
-
-    .modal-desc {
-      margin-bottom: 24px;
-
-      font-size: 15px;
-      color: #d1d5db;
-      line-height: 1.7;
-    }
-
-    .modal-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding-top: 16px;
-
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* 푸터 */
@@ -682,7 +555,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 12px;
+      gap: 8px;
 
       margin-top: 60px;
       padding-top: 30px;
@@ -719,7 +592,7 @@
     <header class="header">
       <div class="badge-wrap">
         <span class="badge-dot"></span>
-        <span>2026.08.30 ~ 2026.09.04 전수 실물 검증 리포트</span>
+        <span>2026.08.30 — 2026.09.04 주간 브리핑</span>
       </div>
       <h1 class="main-title">AI & Tech Weekly Digest</h1>
       <p class="sub-title">
@@ -929,7 +802,7 @@
       <div class="section-header">
         <div class="section-title">
           Curated Stories
-          <span>전수 실물 검증된 25대 주요 뉴스 피드</span>
+          <span>주간 주요 테크 뉴스 피드</span>
         </div>
       </div>
 
@@ -953,31 +826,9 @@
 
     <!-- 푸터 -->
     <footer class="footer">
-      <p>© 2026 Everything AI Have. All 25 articles are strictly verified with live HTTP 200 URLs and authentic source thumbnails.</p>
-      <p>Data Scraped Period: 2026.08.30 ~ 2026.09.04 | Curated & Verified via Playwright</p>
+      <p>© 2026 AI News. Curated weekly tech digest.</p>
+      <p>2026.08.30 — 2026.09.04</p>
     </footer>
-  </div>
-
-  <!-- 상세 모달 -->
-  <div class="modal-overlay" id="detailModal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalCloseBtn">&times;</button>
-      <img src="" alt="" class="modal-img" id="modalImg">
-      <div class="digest-top" style="margin-bottom: 12px;">
-        <span class="digest-tag" id="modalCat"></span>
-        <span class="digest-date" id="modalDate"></span>
-      </div>
-      <h2 class="modal-title" id="modalTitle"></h2>
-      <p class="modal-desc" id="modalDesc"></p>
-      <div class="story-tags" id="modalTags" style="margin-bottom: 20px;"></div>
-      <div class="modal-footer">
-        <span class="source-domain" id="modalDomain"></span>
-        <a href="" target="_blank" rel="noopener noreferrer" class="link-btn" id="modalLinkBtn">
-          <span>원문 기사 직접 읽기</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-        </a>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -986,16 +837,6 @@
     const grid = document.getElementById('storyGrid');
     const searchInput = document.getElementById('searchInput');
     const pills = document.querySelectorAll('.pill-btn');
-    const modal = document.getElementById('detailModal');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
-    const modalImg = document.getElementById('modalImg');
-    const modalCat = document.getElementById('modalCat');
-    const modalDate = document.getElementById('modalDate');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalTags = document.getElementById('modalTags');
-    const modalDomain = document.getElementById('modalDomain');
-    const modalLinkBtn = document.getElementById('modalLinkBtn');
 
     let currentCat = 'all';
     let currentSearch = '';
@@ -1037,12 +878,15 @@
       }
 
       filtered.forEach((s) => {
-        const card = document.createElement('article');
+        const card = document.createElement('a');
         card.className = 'story-card';
+        card.href = s.url;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+        card.setAttribute('aria-label', s.title);
         card.innerHTML = `
           <div class="story-thumb-wrap">
             <img src="${s.thumbnail}" alt="${s.title}" class="story-thumb" loading="lazy">
-            <span class="verified-badge">100% 실물검증</span>
           </div>
           <div class="story-body">
             <div class="story-meta">
@@ -1056,45 +900,17 @@
             </div>
             <div class="story-action">
               <span class="source-domain">${getDomain(s.url)}</span>
-              <a href="${s.url}" target="_blank" rel="noopener noreferrer" class="open-btn" onclick="event.stopPropagation()">
+              <span class="open-btn">
                 <span>원문 기사</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-              </a>
+              </span>
             </div>
           </div>
         `;
 
-        // 카드 클릭 시 모달 열기
-        card.addEventListener('click', () => openModal(s));
         grid.appendChild(card);
       });
     }
-
-    function openModal(s) {
-      modalImg.src = s.thumbnail;
-      modalCat.innerText = s.category;
-      modalDate.innerText = s.date;
-      modalTitle.innerText = s.title;
-      modalDesc.innerText = s.summary;
-      modalDomain.innerText = getDomain(s.url);
-      modalLinkBtn.href = s.url;
-      modalTags.innerHTML = s.tags.map(t => `<span class="story-tag">#${t}</span>`).join('');
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.remove('open');
-      document.body.style.overflow = 'auto';
-    }
-
-    modalCloseBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-    });
 
     // 필터 탭 클릭
     pills.forEach(pill => {
