@@ -406,10 +406,10 @@
       color: var(--text-muted);
     }
 
-    /* 4대 모델 카드 그리드 */
+    /* 5대 모델 카드 그리드 */
     .benchmark-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 16px;
 
       margin-bottom: 32px;
@@ -1084,58 +1084,12 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <span>Benchmark Showdown</span>
         </div>
-        <h2 class="benchmark-title">초경량·고속 추론 & 프론티어 플래그십 총력 비교</h2>
-        <p class="benchmark-desc">DeepSeek-V4.1-Flash의 전격 공개와 Gemini 3.8 Flash, Claude Fable 5.1, GPT-6 Astra 4대 핵심 모델의 아키텍처 및 실전 벤치마크를 1:1 대조합니다.</p>
+        <h2 class="benchmark-title">글로벌 플래그십 vs 핫한 중국산 AI 3종 총력 격돌</h2>
+        <p class="benchmark-desc">서양 프론티어 플래그십(Claude Fable 5.1, GPT-6 Astra)과 최근 가장 주목받는 중국산 3대 AI(DeepSeek-V4.1-Flash, GLM-5.1, Kimi k2.5)의 아키텍처 및 실전 벤치마크를 1:1 대조합니다.</p>
       </div>
 
-      <!-- 4대 모델 스탠딩 카드 -->
+      <!-- 5대 모델 스탠딩 카드 -->
       <div class="benchmark-cards">
-        <div class="model-stand-card highlight">
-          <div class="model-card-top">
-            <div class="model-name-row">
-              <span class="model-name">DeepSeek-V4.1-Flash</span>
-              <span class="model-org">DeepSeek</span>
-            </div>
-            <span class="model-role">🌐 오픈소스 1M 초경량 MoE</span>
-            <div class="model-score-banner">
-              <span class="score-label">SWE-bench</span>
-              <span class="score-value">72.1%</span>
-            </div>
-          </div>
-          <ul class="model-features">
-            <li><span>✓ Causal Encoder-Decoder 552B</span></li>
-            <li><span>✓ 추론 연산 비용 65% 절감</span></li>
-            <li><span>✓ MIT 라이선스 전면 개방</span></li>
-          </ul>
-          <div class="model-price-badge">
-            <span>서빙 단가</span>
-            <span class="price-tag">무료 / 셀프호스팅</span>
-          </div>
-        </div>
-
-        <div class="model-stand-card">
-          <div class="model-card-top">
-            <div class="model-name-row">
-              <span class="model-name">Gemini 3.8 Flash</span>
-              <span class="model-org">Google</span>
-            </div>
-            <span class="model-role">⚡ 1M 초저지연 가성비 챔피언</span>
-            <div class="model-score-banner">
-              <span class="score-label">SWE-bench</span>
-              <span class="score-value">78.4%</span>
-            </div>
-          </div>
-          <ul class="model-features">
-            <li><span>✓ TTFT 140ms 초고속 응답</span></li>
-            <li><span>✓ Terminal-Bench 90.8%</span></li>
-            <li><span>✓ GitHub Copilot GA 지원</span></li>
-          </ul>
-          <div class="model-price-badge">
-            <span>1M 토큰당</span>
-            <span class="price-tag">$0.75 / $3.75</span>
-          </div>
-        </div>
-
         <div class="model-stand-card">
           <div class="model-card-top">
             <div class="model-name-row">
@@ -1150,8 +1104,8 @@
           </div>
           <ul class="model-features">
             <li><span>✓ 100+단계 툴 체이닝 안정성</span></li>
-            <li><span>✓ 자율 상태 롤백 & 환각 42%↓</span></li>
-            <li><span>✓ Copilot Enterprise 탑재</span></li>
+            <li><span>✓ 자율 롤백 & 환각 42% 감소</span></li>
+            <li><span>✓ SWE-bench Verified 81.2%</span></li>
           </ul>
           <div class="model-price-badge">
             <span>1M 토큰당</span>
@@ -1174,11 +1128,80 @@
           <ul class="model-features">
             <li><span>✓ 네이티브 자율 OS/화면 조작</span></li>
             <li><span>✓ 사이버보안 Critical 등급</span></li>
-            <li><span>✓ ExploitBench 100% 석권</span></li>
+            <li><span>✓ SWE-bench Verified 89.5%</span></li>
           </ul>
           <div class="model-price-badge">
-            <span>가입 상태</span>
-            <span class="price-tag">월 $200 (신규 일시중단)</span>
+            <span>공급 방식</span>
+            <span class="price-tag">월 $200 (Pro 전용)</span>
+          </div>
+        </div>
+
+        <div class="model-stand-card highlight">
+          <div class="model-card-top">
+            <div class="model-name-row">
+              <span class="model-name">DeepSeek-V4.1-Flash</span>
+              <span class="model-org">DeepSeek (중국산 1)</span>
+            </div>
+            <span class="model-role">🌐 1M 초경량 오픈소스 MoE</span>
+            <div class="model-score-banner">
+              <span class="score-label">SWE-bench</span>
+              <span class="score-value">72.1%</span>
+            </div>
+          </div>
+          <ul class="model-features">
+            <li><span>✓ Causal Encoder-Decoder 552B</span></li>
+            <li><span>✓ 추론 연산 비용 65% 절감</span></li>
+            <li><span>✓ MIT 라이선스 가중치 개방</span></li>
+          </ul>
+          <div class="model-price-badge">
+            <span>서빙 단가</span>
+            <span class="price-tag">무료 / 셀프호스팅</span>
+          </div>
+        </div>
+
+        <div class="model-stand-card highlight">
+          <div class="model-card-top">
+            <div class="model-name-row">
+              <span class="model-name">GLM-5.1</span>
+              <span class="model-org">Z.ai 智谱 (중국산 2)</span>
+            </div>
+            <span class="model-role">⚡ 754B 초대형 MoE 워크호스</span>
+            <div class="model-score-banner">
+              <span class="score-label">MMLU-Pro</span>
+              <span class="score-value">86.2%</span>
+            </div>
+          </div>
+          <ul class="model-features">
+            <li><span>✓ 754B MoE (활성 48B)</span></li>
+            <li><span>✓ Math-500 91.0% 수학 특화</span></li>
+            <li><span>✓ SWE-bench Verified 76.5%</span></li>
+          </ul>
+          <div class="model-price-badge">
+            <span>1M 토큰당</span>
+            <span class="price-tag">$1.20 / $4.80</span>
+          </div>
+        </div>
+
+        <div class="model-stand-card highlight">
+          <div class="model-card-top">
+            <div class="model-name-row">
+              <span class="model-name">Kimi k2.5</span>
+              <span class="model-org">Moonshot AI (중국산 3)</span>
+            </div>
+            <span class="model-role">📚 2M 초장문 리서치 최강자</span>
+            <div class="model-score-banner">
+              <span class="score-label">LongBench-v2</span>
+              <span class="score-value">85.3%</span>
+            </div>
+          </div>
+          <ul class="model-features">
+            <li><span>✓ 2,000,000 토큰 초장문 컨텍스트</span></li>
+            <li><span>✓ Needle In Haystack 99.9%</span></li>
+            <li><span>✓ 복합 기업 실사·문서 분석 특화</span></li>
+          </ul>
+          <div class="model-price-badge">
+            <span>1M 토큰당</span>
+            <span class="price-tag">$0.80 / $3.20</span>
           </div>
         </div>
       </div>
@@ -1189,47 +1212,53 @@
           <thead>
             <tr>
               <th>평가 항목</th>
-              <th>DeepSeek-V4.1-Flash</th>
-              <th>Gemini 3.8 Flash</th>
               <th>Claude Fable 5.1</th>
               <th>GPT-6 Astra</th>
+              <th>DeepSeek-V4.1-Flash (중국산1)</th>
+              <th>GLM-5.1 (중국산2)</th>
+              <th>Kimi k2.5 (중국산3)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="strong">주요 아키텍처</td>
-              <td>Causal Encoder-Decoder (552B)</td>
-              <td>Dense-Sparse MoE Hybrid</td>
               <td>내장 압축 트랜스포머</td>
               <td>Omnimodal Native with OS Action</td>
+              <td>Causal Encoder-Decoder (552B)</td>
+              <td>Sparse MoE 754B (활성 48B)</td>
+              <td>Long-Context Hybrid Attention</td>
             </tr>
             <tr>
               <td class="strong">코딩 역량 (SWE-bench)</td>
-              <td>72.1%</td>
-              <td class="highlight-cell">78.4%</td>
               <td>81.2%</td>
               <td class="highlight-cell">89.5%</td>
+              <td>72.1%</td>
+              <td>76.5%</td>
+              <td>74.8%</td>
             </tr>
             <tr>
               <td class="strong">컨텍스트 윈도우</td>
               <td>1,000,000 토큰</td>
-              <td class="highlight-cell">1,000,000 토큰 (Native)</td>
               <td>1,000,000 토큰</td>
               <td>1,000,000 토큰</td>
+              <td>512,000 토큰</td>
+              <td class="highlight-cell">2,000,000 토큰 (2M Native)</td>
             </tr>
             <tr>
               <td class="strong">초기 지연시간 (TTFT)</td>
-              <td>~160ms</td>
-              <td class="highlight-cell">~140ms (초고속)</td>
               <td>~420ms</td>
               <td>~380ms</td>
+              <td class="highlight-cell">~160ms (초고속)</td>
+              <td>~210ms</td>
+              <td>~260ms</td>
             </tr>
             <tr>
               <td class="strong">라이선스 / 공급 형태</td>
-              <td class="highlight-cell">MIT 라이선스 (전면 무료)</td>
-              <td>Google Cloud / Copilot</td>
               <td>Anthropic API / Copilot</td>
               <td>ChatGPT Pro / Daybreak 파트너</td>
+              <td class="highlight-cell">MIT 라이선스 (전면 무료)</td>
+              <td>Hugging Face 오픈 가중치 / API</td>
+              <td>Moonshot Cloud / 상용 API</td>
             </tr>
           </tbody>
         </table>
@@ -1240,20 +1269,24 @@
         <h3 class="scenario-title">실무 개발자 시나리오별 최적 권장 가이드</h3>
         <ul class="scenario-list">
           <li>
-            <span class="scenario-model">DeepSeek-V4.1-Flash</span>
-            <span class="scenario-use">금융/의료 등 민감 데이터 사내 온프레미스 격리 구축, 비용 제약이 큰 대규모 배치 작업</span>
+            <span class="scenario-model">Claude Fable 5.1 (Anthropic)</span>
+            <span class="scenario-use">모노레포 전면 리팩토링, 100단계 이상 복합 툴 호출이 필요한 미션 크리티컬 자율 에이전트</span>
           </li>
           <li>
-            <span class="scenario-model">Gemini 3.8 Flash</span>
-            <span class="scenario-use">IDE 실시간 코드 자동완성, 수만 번 반복되는 CI/CD 유닛테스트 파이프라인, 100만 토큰 로그 분석</span>
+            <span class="scenario-model">GPT-6 Astra (OpenAI)</span>
+            <span class="scenario-use">제로데이 취약점 모의 침투 및 방어, 네이티브 화면/OS 직접 조작 자동화 파이프라인</span>
           </li>
           <li>
-            <span class="scenario-model">Claude Fable 5.1</span>
-            <span class="scenario-use">모노레포 전면 리팩토링, 100단계 이상 복합 툴을 사용하는 자율 에이전트, 무결성 보장 미션</span>
+            <span class="scenario-model">DeepSeek-V4.1-Flash (중국산 1)</span>
+            <span class="scenario-use">민감 데이터 사내 온프레미스 격리 구축, 연산 비용 제약이 큰 대규모 실시간 추론 배치</span>
           </li>
           <li>
-            <span class="scenario-model">GPT-6 Astra</span>
-            <span class="scenario-use">제로데이 침투 테스트 및 사이버 취약점 분석, 다중 데스크톱 앱 조작 자동화, 최고난도 수학 증명</span>
+            <span class="scenario-model">GLM-5.1 (중국산 2)</span>
+            <span class="scenario-use">다국어 엔지니어링, 복합 수학 공식 증명 및 오픈소스 MoE 기반 맞춤형 파인튜닝 워크플로우</span>
+          </li>
+          <li>
+            <span class="scenario-model">Kimi k2.5 (중국산 3)</span>
+            <span class="scenario-use">200만 토큰 대규모 사내 문서·코드베이스 통합 RAG, 대용량 법률·금융 실사 리서치 분석</span>
           </li>
         </ul>
       </div>
