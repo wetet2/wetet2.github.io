@@ -1085,7 +1085,7 @@
           <span>Benchmark Showdown</span>
         </div>
         <h2 class="benchmark-title">글로벌 플래그십 vs 핫한 중국산 AI 3종 총력 격돌</h2>
-        <p class="benchmark-desc">서양 프론티어 플래그십(Claude Fable 5.1, GPT-6 Astra)과 최근 가장 주목받는 중국산 3대 AI(DeepSeek-V4.1-Flash, GLM-5.1, Kimi k2.5)의 아키텍처 및 실전 벤치마크를 1:1 대조합니다.</p>
+        <p class="benchmark-desc">서양 프론티어 플래그십(Claude Fable 5.1, GPT-6 Astra)과 최근 가장 주목받는 중국산 3대 AI(DeepSeek-V4.1-Flash, GLM-5.3, Kimi k3)의 아키텍처 및 실전 벤치마크를 1:1 대조합니다.</p>
       </div>
 
       <!-- 5대 모델 스탠딩 카드 -->
@@ -1162,46 +1162,46 @@
         <div class="model-stand-card highlight">
           <div class="model-card-top">
             <div class="model-name-row">
-              <span class="model-name">GLM-5.1</span>
+              <span class="model-name">GLM-5.3</span>
               <span class="model-org">Z.ai 智谱 (중국산 2)</span>
             </div>
-            <span class="model-role">⚡ 754B 초대형 MoE 워크호스</span>
+            <span class="model-role">⚡ 820B 차세대 MoE 플래그십</span>
             <div class="model-score-banner">
               <span class="score-label">MMLU-Pro</span>
-              <span class="score-value">86.2%</span>
+              <span class="score-value">89.5%</span>
             </div>
           </div>
           <ul class="model-features">
-            <li><span>✓ 754B MoE (활성 48B)</span></li>
-            <li><span>✓ Math-500 91.0% 수학 특화</span></li>
-            <li><span>✓ SWE-bench Verified 76.5%</span></li>
+            <li><span>✓ 820B MoE (활성 52B)</span></li>
+            <li><span>✓ Math-500 94.2% 수학·추론</span></li>
+            <li><span>✓ SWE-bench Verified 80.4%</span></li>
           </ul>
           <div class="model-price-badge">
             <span>1M 토큰당</span>
-            <span class="price-tag">$1.20 / $4.80</span>
+            <span class="price-tag">$1.10 / $4.40</span>
           </div>
         </div>
 
         <div class="model-stand-card highlight">
           <div class="model-card-top">
             <div class="model-name-row">
-              <span class="model-name">Kimi k2.5</span>
+              <span class="model-name">Kimi k3</span>
               <span class="model-org">Moonshot AI (중국산 3)</span>
             </div>
-            <span class="model-role">📚 2M 초장문 리서치 최강자</span>
+            <span class="model-role">📚 3M 초장문 무손실 추론 챔피언</span>
             <div class="model-score-banner">
               <span class="score-label">LongBench-v2</span>
-              <span class="score-value">85.3%</span>
+              <span class="score-value">89.1%</span>
             </div>
           </div>
           <ul class="model-features">
-            <li><span>✓ 2,000,000 토큰 초장문 컨텍스트</span></li>
-            <li><span>✓ Needle In Haystack 99.9%</span></li>
-            <li><span>✓ 복합 기업 실사·문서 분석 특화</span></li>
+            <li><span>✓ 3,000,000 토큰 초장문 컨텍스트</span></li>
+            <li><span>✓ Needle In Haystack 100%</span></li>
+            <li><span>✓ SWE-bench Verified 78.9%</span></li>
           </ul>
           <div class="model-price-badge">
             <span>1M 토큰당</span>
-            <span class="price-tag">$0.80 / $3.20</span>
+            <span class="price-tag">$0.90 / $3.60</span>
           </div>
         </div>
       </div>
@@ -1215,8 +1215,8 @@
               <th>Claude Fable 5.1</th>
               <th>GPT-6 Astra</th>
               <th>DeepSeek-V4.1-Flash (중국산1)</th>
-              <th>GLM-5.1 (중국산2)</th>
-              <th>Kimi k2.5 (중국산3)</th>
+              <th>GLM-5.3 (중국산2)</th>
+              <th>Kimi k3 (중국산3)</th>
             </tr>
           </thead>
           <tbody>
@@ -1225,32 +1225,32 @@
               <td>내장 압축 트랜스포머</td>
               <td>Omnimodal Native with OS Action</td>
               <td>Causal Encoder-Decoder (552B)</td>
-              <td>Sparse MoE 754B (활성 48B)</td>
-              <td>Long-Context Hybrid Attention</td>
+              <td>Sparse MoE 820B (활성 52B)</td>
+              <td>Ultra-Long Hybrid Attention</td>
             </tr>
             <tr>
               <td class="strong">코딩 역량 (SWE-bench)</td>
               <td>81.2%</td>
               <td class="highlight-cell">89.5%</td>
               <td>72.1%</td>
-              <td>76.5%</td>
-              <td>74.8%</td>
+              <td>80.4%</td>
+              <td>78.9%</td>
             </tr>
             <tr>
               <td class="strong">컨텍스트 윈도우</td>
               <td>1,000,000 토큰</td>
               <td>1,000,000 토큰</td>
               <td>1,000,000 토큰</td>
-              <td>512,000 토큰</td>
-              <td class="highlight-cell">2,000,000 토큰 (2M Native)</td>
+              <td>1,000,000 토큰</td>
+              <td class="highlight-cell">3,000,000 토큰 (3M Native)</td>
             </tr>
             <tr>
               <td class="strong">초기 지연시간 (TTFT)</td>
               <td>~420ms</td>
               <td>~380ms</td>
               <td class="highlight-cell">~160ms (초고속)</td>
-              <td>~210ms</td>
-              <td>~260ms</td>
+              <td>~190ms</td>
+              <td>~240ms</td>
             </tr>
             <tr>
               <td class="strong">라이선스 / 공급 형태</td>
@@ -1281,12 +1281,12 @@
             <span class="scenario-use">민감 데이터 사내 온프레미스 격리 구축, 연산 비용 제약이 큰 대규모 실시간 추론 배치</span>
           </li>
           <li>
-            <span class="scenario-model">GLM-5.1 (중국산 2)</span>
-            <span class="scenario-use">다국어 엔지니어링, 복합 수학 공식 증명 및 오픈소스 MoE 기반 맞춤형 파인튜닝 워크플로우</span>
+            <span class="scenario-model">GLM-5.3 (중국산 2)</span>
+            <span class="scenario-use">다국어 엔지니어링, 복합 코드 자율 리팩토링 및 820B MoE 오픈소스 기반 맞춤형 파인튜닝</span>
           </li>
           <li>
-            <span class="scenario-model">Kimi k2.5 (중국산 3)</span>
-            <span class="scenario-use">200만 토큰 대규모 사내 문서·코드베이스 통합 RAG, 대용량 법률·금융 실사 리서치 분석</span>
+            <span class="scenario-model">Kimi k3 (중국산 3)</span>
+            <span class="scenario-use">300만 토큰 대규모 사내 문서·코드베이스 통합 RAG, 대용량 법률·금융 실사 리서치 분석</span>
           </li>
         </ul>
       </div>
